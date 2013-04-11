@@ -233,5 +233,9 @@ xi, yi = np.linspace(rSide.min(), rSide.max(), 300), np.linspace(sSide.min(), sS
 xi, yi = np.meshgrid(xi, yi)
 zi = scipy.interpolate.griddata((rSide, sSide), InterTemp, (xi, yi), method = 'linear')
 plt.imshow(zi, vmin=InterTemp.min(), vmax=InterTemp.max(), origin = 'lower', extent=[rSide.min(), rSide.max(), sSide.min(), sSide.max()])
+plt.title("Temperature distribution")
+plt.xlabel("length")
+plt.ylabel("width")
 plt.colorbar()
 plt.show()
+
